@@ -20,7 +20,7 @@
 <body>
 {% include "src/templates/includes/header.swig" %}
 {{>body}}
-{% include "src/templates/includes/footer.swig" %}
+<span class="mobilewarning">Go get a laptop with a nice big screen, or turn your iPad sideways.<br><br>I haven't built this for mobile or tablet, and probably won't.<br><br><br><strong>Love, <a href="https://mxbry.com">Max</a></strong></span>
 <script src="/js/app.js"></script>
 </body>
 

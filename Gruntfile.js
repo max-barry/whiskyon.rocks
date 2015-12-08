@@ -119,6 +119,17 @@ module.exports = function(grunt) {
             }
         },
         /**
+        Deployment
+        */
+        surge: {
+            'whiskyon.rocks': {
+                options: {
+                    project: '<%= pkg.paths.build %>',
+                    domain: 'whiskyon.rocks'
+                }
+            }
+        },
+        /**
         Templating
         */
         assemble : {
@@ -265,7 +276,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask("base", ["assemble", "jshint", "concat", "uglify", "sass"])
     grunt.registerTask("build", ["base", "copy"]);
-    grunt.registerTask("dist", ["clean", "base", "prettify", "cmq", "postcss", "copy:fonts", "imagemin", "webp"]);
+    grunt.registerTask("dist", ["clean", "base", "prettify", "cmq", "postcss", "copy:fonts"]);
     grunt.registerTask("run", "connect");
+    grunt.registerTask("deploy", ["dist", "surge"]);
 
 };

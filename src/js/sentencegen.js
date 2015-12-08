@@ -12,7 +12,7 @@
             indObj = whi.getRandomFromArray(whi.params.indObject),
             dirObj = whi.getRandomFromArray(whi.params.dirObject);
         
-        var generatedSentence = ["You should", medium, target, indObj, dirObj].join(" ") + ".";
+        var generatedSentence = ["You could", medium, target, indObj, dirObj].join(" ") + ".";
 
         targetEl.text(generatedSentence);
 

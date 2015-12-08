@@ -59,3 +59,9 @@ layout: base
         </div>
     </div>
 </article>
+<aside class="killscreen">
+    <h3 class="--anonpro">Game Over. You Fell Asleep.</h3>
+    <p>You continued to drink without seeing any perceivable benefit. That was an odd decision. You probably need to consider your relationship with alcohol.</p>
+    <p><a class="--anonpro" href=".">>> Repeat My Mistakes</a></p>
+    <p><a class="--anonpro" href="https://mxbry.com">>> mxbry.com</a></p>
+</aside>

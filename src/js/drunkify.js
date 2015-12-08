@@ -6,12 +6,19 @@
     var _shakeLength = 750,
         _targetSentence = $(".container__content__copyline.--target"),
         _drunkifyTrigger = $("#drunkify"),
-        _body = $("body"),
-        _startBlinkingAt = 5;
+        _body = $("article"),
+        _startBlinkingAt = 5,
+        _maxBlinks = 7 + _startBlinkingAt;
 
     var _replaceAt = function(str, index, character) {
         // @link http://max.fyi/1XOTi0h
         return str.substr(0, index) + character + str.substr(index+character.length);
+    };
+
+    var _killScreen = function(){
+        _drunkifyTrigger.off("click", whi.drunkify);
+        $("section").remove();
+        $(".killscreen").addClass("--reveal");
     };
 
     var _blink = function() {
@@ -20,6 +27,12 @@
         });
         _body[0].offsetWidth = _body[0].offsetWidth;
         _body.addClass("--blink-" + (whi.shakesToDate - _startBlinkingAt));
+    
+        console.log(whi.shakesToDate);
+        if (whi.shakesToDate === _maxBlinks) {
+            setTimeout(_killScreen, 1000);
+        }
+
     };
 
     var _cleanUp = function() {
@@ -48,14 +61,9 @@
             indexOfCharsToChange.push(Math.floor(Math.random() * copyLength));
         }
 
-        console.log(indexOfCharsToChange);
-        console.log(currentCopy);
-
         for (var i = indexOfCharsToChange.length - 1; i >= 0; i--) {
             currentCopy = _replaceAt(currentCopy, indexOfCharsToChange[i], possible[Math.floor(Math.random()*possible.length)]);
         }
-
-        console.log(currentCopy);
 
         _targetSentence.find("span").text(currentCopy);
 

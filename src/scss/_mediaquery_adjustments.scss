@@ -1,0 +1,43 @@
+// Making everything squish in size for small monitors
+@media screen and ( max-height: 768px ){
+	.container__content {
+		margin-top: 64px;
+	}
+	.container__content__copyline.--nowrap {
+		font-size: 32px;
+	}
+	.container__content__copyline.--target {
+		min-height: 100px;
+		span {
+			font-size: 40px;
+		}
+	}
+}
+
+// Don't show nada on mobile
+@media screen and ( max-width: 768px ){
+	article, aside {
+		display: none;
+	}
+	body:before {
+		content: "";
+		background: $maxgreen;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+	span.mobilewarning {
+		display: inline-block;
+		padding: 2*$blh;
+		font-family: $anon-font-family;
+		color: white;
+		z-index: 103;
+		font-size: 22px;
+		a {
+			color: white;
+		}
+	}
+}
