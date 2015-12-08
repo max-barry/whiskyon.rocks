@@ -1,0 +1,60 @@
+@include keyframes(shakeit) {
+    0%, 100% {
+        @include transform(translate3d(0, 0, 0));
+        @include filter(blur(0px));
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        @include transform(translate3d(-10px, 0, 0));
+        @include filter(blur(1px));
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        @include transform(translate3d(10px, 0, 0));
+        @include filter(blur(1px));
+    }
+};
+
+@include keyframes(drinkGlass) {
+    0%,
+    100% {
+        @include transform(none);
+    }
+    50% {
+        @include transform(rotate(20deg) translate(5px, 10px));
+    }
+};
+
+@include keyframes(drinkBottle) {
+    0%,
+    100% {
+        @include transform(none);
+    }
+    50% {
+        @include transform(rotate(-60deg) translate(-3px, -10px));
+    }
+};
+
+@include keyframes(spinsad){
+    0%,
+    100% {
+        fill: $red;
+    }
+    50% {
+        fill: $red;
+    }
+};
+
+@include keyframes(scrolltext) {
+    from {
+        @include transform(translateX(-2%));
+    }
+    to {
+        @include transform(translateX(-90%));
+    }
+};

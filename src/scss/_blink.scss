@@ -1,0 +1,70 @@
+body{
+    &:after, &:before {
+        content: "";
+        display: block;
+        height: 50vh;
+        position: fixed;
+        left: 0;
+        right: 0;
+        background-color: black;
+        z-index: 100;
+        @include animation-timing-function($ease-out-quint);
+    }
+    &:after {
+        top: 0;
+        @include transform(translateY(-100%));
+    }
+    &:before {
+        bottom: 0;
+        @include transform(translateY(100%));
+    }
+}
+
+@for $i from 1 through 6 {
+    body.--blink-#{$i} {
+        &:before, &:after {
+            $time: ($i * 500) + ms;
+            @include animation-duration($time);
+        }
+        &:before {
+            @include animation-name(blinkBottom);
+        }
+        &:after {
+            @include animation-name(blinkTop);
+        }
+    }
+}
+
+@include keyframes(blinkTop) {
+    0%,
+    100% {
+        @include transform(translateY(-100%));
+    }
+    50% {
+        @include transform(none);
+    }
+};
+@include keyframes(blinkBottom) {
+    0%,
+    100% {
+        @include transform(translateY(100%));
+    }
+    50% {
+        @include transform(none);
+    }
+};
+
+body.--blink-7 {
+    &:before, &:after {
+        @include animation-duration(750ms);
+        @include animation-fill-mode(forwards);
+        @include animation-name(blinkEnd);
+        @include animation-timing-function($ease-in-quint);
+    }
+}
+
+@include keyframes(blinkEnd) {
+    to {
+        @include transform(none);
+    }
+};

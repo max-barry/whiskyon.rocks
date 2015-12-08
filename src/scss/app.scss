@@ -1,0 +1,226 @@
+/**
+Vendor
+*/
+@import "reset";
+@import "bourbon";
+@import "scut";
+/**
+Functions
+*/
+@import "math";
+/**
+Settings & variables
+*/
+@import "settings";
+@import "typography";
+@import "icons";
+@import "animations";
+
+// Custom components
+@import "blink";
+
+/**
+Custom resets
+*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    // background-image: url("/img/paper.jpg");
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.video-wrap {
+    overflow: hidden;
+    video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: -1;
+        background-image: url("/img/poster.png");
+        background-size: cover;
+    }
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+
+.container__content {
+    max-width: 85vw;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #787878;
+    border-radius: 1px;
+    padding: 20px 0;
+    margin: 6*$blh auto 0 auto;
+    transform: skew(-10deg);
+}
+
+.container__content__copyline {
+    font-size: 44px;
+    line-height: 1.1;
+    &:not(.--target) {
+        will-change: text-shadow;
+        @include transition(text-shadow 150ms);
+    }
+    &.--target {
+        min-height: 176px;
+        > span {
+            max-width: 100vw;
+            display: block;
+            color: $red;
+            font-family: $heavy-font-family;
+            font-size: 64px;
+            padding-left: 10px;
+            padding-right: 20px;
+            border-left: 15px solid currentcolor;
+            margin-top: 15px;
+        }
+    }
+}
+
+.--nowrap {
+    white-space: nowrap;
+}
+
+.--textulight {
+    font-family: butlerultralight, $base-font-family;
+}
+.--textlight {
+    font-family: butlerlight, $base-font-family;
+}
+
+.--scrollright {
+    @include animation-direction(reverse);
+}
+
+.--scrollleft, .--scrollright {
+    will-change: transform;
+    @include animation-duration(300s);
+    @include animation-name(scrolltext);
+    @include animation-iteration-count(infinite);
+    @include animation-timing-function(linear);
+}
+
+.--shakeit {
+    will-change: filter, transform;
+    @include animation-name(shakeit);
+    @include animation-duration(750ms);
+    @include animation-timing-function($ease-out-quint);
+}
+
+.controls {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3*$blh;
+}
+
+.controls__action {
+    border-radius: 50%;
+    background-color: white;
+    $dimensions: 256px;
+    height: $dimensions;
+    width: $dimensions;
+    position: relative;
+    display: inline-block;
+    margin: 0 $blh;
+}
+
+.--shadow {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+}
+
+.controls__action__icon, .controls__action__trigger {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+.controls__action__icon {
+    top: 3*$blh;
+    .--sad {
+        display: block;
+        position: relative;
+        top: -20px;
+        svg {
+            @include transition(fill 150ms);
+        }
+    }
+    .--glass, .--bottle {
+        display: inline-block;
+        position: relative;
+        will-change: transform;
+        @include animation-duration(1s);
+        svg {
+            will-change: fill;
+            @include transition(fill 150ms);
+        }
+    }
+    .--glass {
+        float: left;
+    }
+    .--bottle {
+        top: -12px;
+    }
+    &.--drink {
+        .--glass {
+            @include animation-name(drinkGlass);
+            svg {
+                fill: #3399ff;
+            }
+        }
+        .--bottle {
+            @include animation-name(drinkBottle);
+            svg {
+                fill: #0F6616;
+            }
+        }
+    }
+}
+
+.regretit .--sad svg {
+    fill: $red;
+}
+
+
+
+.controls__action__trigger {
+    bottom: 3*$blh;
+    min-width: 170px;
+}
+
+button {
+    font-family: $anon-font-family;
+    border: 2px solid black;
+    outline: 0;
+    background-color: transparent;
+    padding: 0.5*$blh $blh;
+    cursor: pointer;
+    color: black;
+    will-change: opacity;
+    @include transition(opacity 150ms);
+    &[disabled] {
+        opacity: 0.5;
+    }
+}
+
+.--anonpro {
+    font-family: $anon-font-family;
+}
