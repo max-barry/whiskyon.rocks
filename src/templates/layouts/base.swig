@@ -28,7 +28,7 @@
 	<meta property="og:description" content="{{meta.description}}">
 	<meta property="og:url" content="http://whiskyon.rocks/">
 	<meta property="og:site_name" content="100% Drink Free Drinking Game | whiskyon.rocks">
-	<meta property="og:image" content="http://whiskyon.rocks/img/social.png">
+	<meta property="og:image" content="http://whiskyon.rocks/img/social.fb.png">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="en_US">
 	<meta property="og:see_also" content="http://mxbry.com/">
