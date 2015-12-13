@@ -125,11 +125,9 @@ body {
 }
 
 .controls {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 3*$blh;
+    margin: 3*$blh 0;
+    display: flex;
+    justify-content: center;
 }
 
 .controls__action {
@@ -141,6 +139,13 @@ body {
     position: relative;
     display: inline-block;
     margin: 0 $blh;
+}
+
+.--info {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 3*$blh $blh;
 }
 
 .--shadow {
@@ -223,6 +228,10 @@ button {
 
 .--anonpro {
     font-family: $anon-font-family;
+}
+
+a, a:visited {
+    color: $maxgreen;
 }
 
 // All the trash media query code piled in to one file.

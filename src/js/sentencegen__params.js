@@ -35,15 +35,15 @@
         "your buddy",
         "your enemy",
         "your frenemy",
+        "your childhood friend",
         "your son",
         "your daughter",
         "your child",
         "your niece",
         "your nephew",
         "your sweetheart",
-        "Santa",
+        "a stranger",
         "the police",
-        "Matt Damon",
     ];
 
     whi.params.indObject = [

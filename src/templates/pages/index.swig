@@ -9,12 +9,22 @@ layout: base
         <div class="container__content__copyline --nowrap --scrollright"></div>
         <div class="container__content__copyline --nowrap --textlight --scrollleft"></div>
         <div class="container__content__copyline --target">
-            <span id="sentence-target"><span class="--anonpro">Drinking Simulator 2015</span><br>Find Something to Regret &darr;</span>
+            <span id="sentence-target"><span class="--anonpro">Life in a Bar</span><br>Find Something to Regret &darr;</span>
         </div>
         <div class="container__content__copyline --nowrap --textulight --scrollright"></div>
         <div class="container__content__copyline --nowrap --scrollleft"></div>
     </section>
     <div class="controls">
+        <div class="controls__action --shadow">
+            <div class="controls__action__icon">
+                <i class="icon --sad">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="64" height="64" viewBox="0 0 32 32" style="width: 64px;height: 64px;">
+                        <path d="M16-0.034c-8.841 0-16.035 7.192-16.035 16.034s7.194 16.034 16.035 16.034 16.035-7.192 16.035-16.034-7.194-16.034-16.035-16.034zM16 30.966c-8.252 0-14.965-6.714-14.965-14.966s6.713-14.966 14.965-14.966 14.965 6.714 14.965 14.966-6.713 14.966-14.965 14.966zM16.163 19.823c-2.789 0-5.477 1.179-7.374 3.235-0.2 0.217-0.187 0.555 0.031 0.755 0.216 0.2 0.554 0.188 0.755-0.030 1.695-1.838 4.096-2.892 6.587-2.892 2.529 0 4.956 1.081 6.656 2.967 0.105 0.116 0.251 0.176 0.397 0.176 0.128 0 0.256-0.045 0.358-0.138 0.219-0.197 0.237-0.535 0.039-0.755-1.903-2.109-4.618-3.318-7.449-3.318zM10.5 16.5c1.103 0 2-0.897 2-2s-0.897-2-2-2-2 0.897-2 2 0.897 2 2 2zM10.5 13.5c0.551 0 1 0.448 1 1s-0.449 1-1 1-1-0.448-1-1 0.449-1 1-1zM21.5 16.5c1.103 0 2-0.897 2-2s-0.897-2-2-2-2 0.897-2 2 0.897 2 2 2zM21.5 13.5c0.551 0 1 0.448 1 1s-0.449 1-1 1-1-0.448-1-1 0.449-1 1-1z"/>
+                    </svg>
+                </i>
+            </div>
+            <button class="controls__action__trigger" id="sentence-generate">What Will I Regret</button>
+        </div>
         <div class="controls__action --shadow">
             <div class="controls__action__icon">
                 <i class="icon --glass">
@@ -47,20 +57,15 @@ layout: base
             </div>
             <button class="controls__action__trigger" id="drunkify">Take a Drink</button>
         </div>
-        <div class="controls__action --shadow">
-            <div class="controls__action__icon">
-                <i class="icon --sad">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="64" height="64" viewBox="0 0 32 32" style="width: 64px;height: 64px;">
-                        <path d="M16-0.034c-8.841 0-16.035 7.192-16.035 16.034s7.194 16.034 16.035 16.034 16.035-7.192 16.035-16.034-7.194-16.034-16.035-16.034zM16 30.966c-8.252 0-14.965-6.714-14.965-14.966s6.713-14.966 14.965-14.966 14.965 6.714 14.965 14.966-6.713 14.966-14.965 14.966zM16.163 19.823c-2.789 0-5.477 1.179-7.374 3.235-0.2 0.217-0.187 0.555 0.031 0.755 0.216 0.2 0.554 0.188 0.755-0.030 1.695-1.838 4.096-2.892 6.587-2.892 2.529 0 4.956 1.081 6.656 2.967 0.105 0.116 0.251 0.176 0.397 0.176 0.128 0 0.256-0.045 0.358-0.138 0.219-0.197 0.237-0.535 0.039-0.755-1.903-2.109-4.618-3.318-7.449-3.318zM10.5 16.5c1.103 0 2-0.897 2-2s-0.897-2-2-2-2 0.897-2 2 0.897 2 2 2zM10.5 13.5c0.551 0 1 0.448 1 1s-0.449 1-1 1-1-0.448-1-1 0.449-1 1-1zM21.5 16.5c1.103 0 2-0.897 2-2s-0.897-2-2-2-2 0.897-2 2 0.897 2 2 2zM21.5 13.5c0.551 0 1 0.448 1 1s-0.449 1-1 1-1-0.448-1-1 0.449-1 1-1z"/>
-                    </svg>
-                </i>
-            </div>
-            <button class="controls__action__trigger" id="sentence-generate">What Will I Regret</button>
+        <div class="controls__action --shadow --info --anonpro">
+            When people drink they do things they regret. Now non-drinkers can find suggestions for what they'll regret to.
+            <br>
+            <a href="https://mxbry.com">>> mxbry.com</a>
         </div>
     </div>
 </article>
 <aside class="killscreen">
-    <h3 class="--anonpro">Game Over. You Fell Asleep.</h3>
+    <h3 class="--anonpro">You Fell Asleep.</h3>
     <p>You continued to drink without seeing any perceivable benefit. That was an odd decision. You probably need to consider your relationship with alcohol.</p>
     <p><a class="--anonpro" href=".">>> Repeat My Mistakes</a></p>
     <p><a class="--anonpro" href="https://mxbry.com">>> mxbry.com</a></p>

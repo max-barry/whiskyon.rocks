@@ -100,9 +100,6 @@ article.--blink-7 {
     p {
         font-size: 22px;
     }
-    a {
-        color: $maxgreen;
-    }
     &.--reveal {
         h3, p {
             @include transform(none);

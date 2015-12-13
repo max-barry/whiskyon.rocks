@@ -15,6 +15,11 @@
 }
 
 // Don't show nada on mobile
+@media screen and ( min-width: 769px ){
+	span.mobilewarning {
+		display: none;
+	}
+}
 @media screen and ( max-width: 768px ){
 	article, aside {
 		display: none;
