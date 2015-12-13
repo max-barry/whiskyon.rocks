@@ -280,7 +280,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask("base", ["assemble", "jshint", "concat", "uglify", "sass"])
     grunt.registerTask("build", ["base", "copy"]);
-    grunt.registerTask("dist", ["clean", "base", "prettify", "cmq", "postcss", "copy:fonts"]);
+    grunt.registerTask("dist", ["clean", "base", "prettify", "cmq", "postcss", "copy"]);
     grunt.registerTask("run", "connect");
     grunt.registerTask("deploy", ["dist", "surge"]);
 
