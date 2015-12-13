@@ -60,7 +60,7 @@ layout: base
         <div class="controls__action --shadow --info --anonpro">
             When people drink they do things they regret. Now non-drinkers can find suggestions for what they'll regret to.
             <br>
-            <a href="https://mxbry.com">>> mxbry.com</a>
+            <a href="https://mxbry.com/?utm_source=project&utm_medium=website&utm_campaign=whiskyon.rocks">>> mxbry.com</a>
         </div>
     </div>
 </article>
@@ -68,5 +68,5 @@ layout: base
     <h3 class="--anonpro">You Fell Asleep.</h3>
     <p>You continued to drink without seeing any perceivable benefit. That was an odd decision. You probably need to consider your relationship with alcohol.</p>
     <p><a class="--anonpro" href=".">>> Repeat My Mistakes</a></p>
-    <p><a class="--anonpro" href="https://mxbry.com">>> mxbry.com</a></p>
+    <p><a class="--anonpro" href="https://mxbry.com/?utm_source=project&utm_medium=website&utm_campaign=whiskyon.rocks">>> mxbry.com</a></p>
 </aside>

@@ -55,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 {{>body}}
-<span class="mobilewarning">Go get a laptop with a nice big screen, or turn your iPad sideways.<br><br>I haven't built this for mobile or tablet, and probably won't.<br><br><br><strong>Love, <a href="https://mxbry.com">Max</a></strong></span>
+<span class="mobilewarning">Go get a laptop with a nice big screen, or turn your iPad sideways.<br><br>I haven't built this for mobile or tablet, and probably won't.<br><br><br><strong>Love, <a href="https://mxbry.com/?utm_source=project&utm_medium=website&utm_campaign=whiskyon.rocks">Max</a></strong></span>
 <script src="/js/app.js"></script>
 </body>
 
