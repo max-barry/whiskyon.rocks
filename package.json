@@ -2,7 +2,7 @@
   "name": "whiskey",
   "title": "whiskey",
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "keywords": [],
   "peerDependencies": {
     "surge": "~0.17.3"
